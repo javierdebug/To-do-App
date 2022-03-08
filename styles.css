@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+hr {
+    border-color: gray;
+    /* top | right | bottom | left */
+    border-style: dotted none none none;
+    border-width: 0.1cm;
+    /* margin: 100px auto; */
+    width: 45%;
+}
+
+.btnDoneCurrent {
+    background-color: green;
+}
+
+.btnRemoveCurrent {
+    background-color: rgb(199, 71, 71);
+    color: white;
+}
+
+.btnRevertCurrent {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.buttons {
+    visibility: none;
+}
+
+.crossed {
+    text-decoration: line-through;
+}
+
+#completed {
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
+}
+
+#done {
+    border: dotted;
+    border-top: none;
+    padding: 15px 20px 15px 40px;
+}
+
+/* #general {
+    border: dashed;
+    /* padding-left: 200px;
+    padding-right: 200px; */
+    /* padding-right: 25px; 
+
+} */
+

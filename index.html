@@ -10,35 +10,31 @@
     <title>Todo App Vanilla JS+jquery</title>
 </head>
 <body>
-    <h1 class="title">Todo App</h1>
-    <div>
-        <input type="text" id="inputTask" placeholder="Add task">
-        <button id="btn-add">Add</button>
-    </div>
+    <div id="container">
+        <h1 class="title">Todo App</h1>
+        <div>
+            <input type="text" id="inputTask" placeholder="Add task">
+            <button id="btn-add" class="btn">Add</button>
+        </div>
+    </div>    
     <hr>
-    <div id="general">
-        <ol id="tasks">
-            <!-- <li>
-                <button>X</button>
-            </li> -->
-        </ol>
+        <div id="general">
+            <ol id="tasks" class="btn">
+                <!-- <li>
+                    <button>X</button>
+                </li> -->
+            </ol>
     </div>
 
     <div id="completed">
         <p>Completed Tasks:</p>
-        <ol id="done">
+        <ol id="done" class="btn">
             <!-- <li>
                 <button>X</button>
             </li> -->
         </ol>
     </div>
-    <button id="btn-clearAll">Clear All</button>
-
-    
-    <div class="buttons" >
-        <!-- <button>s that are generated dynamically and added here -->
-    </div>
-    
+    <button id="btn-clearAll" class="btn">Clear All</button>
     
 </body>
 </html>

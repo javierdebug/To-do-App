@@ -1,4 +1,5 @@
 body {
+    background-color: papayawhip;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +10,6 @@ hr {
     /* top | right | bottom | left */
     border-style: dotted none none none;
     border-width: 0.1cm;
-    /* margin: 100px auto; */
     width: 45%;
 }
 
@@ -46,12 +46,18 @@ hr {
     border-top: none;
     padding: 15px 20px 15px 40px;
 }
+ 
+.btn {
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 600;
+}
 
-/* #general {
-    border: dashed;
-    /* padding-left: 200px;
-    padding-right: 200px; */
-    /* padding-right: 25px; 
+h1 {
+    font-size: 2.2rem;
+    text-align: center;
+}
 
-} */
-
+p {
+    font-style: italic;
+}

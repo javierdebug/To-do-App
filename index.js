@@ -121,7 +121,7 @@
     }
 
     $("#btn-clearAll").on("click", function (e) {
-        taskDone = [];
+        done = [];
         $("#done").html("");
         tasks = [];
         $("#tasks").html("");

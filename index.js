@@ -18,7 +18,7 @@ function initiate() {
         }  
         
         for (let i = 0; i < tasks.length; i++) {
-            document.querySelector("#tasks").append("<li>" + tasks[i] +
+            document.querySelector("#tasks").insertAdjacentHTML("beforeend","<li>" + tasks[i] +
             ` <button class="btnDoneCurrent">✓</button>` + 
             ` <button class="btnRemoveCurrent">X</button>` +
             `</li>`);
@@ -95,7 +95,7 @@ document.querySelector('body').addEventListener('click', function(event) { //An 
         ` <button class="btnRemoveCurrent">X</button>` +
         `</li>`);
 
-        //Remove from done:
+        //Remove from done array:
         let index = done.indexOf(inputVal);
         done.splice(index,1);
         saveDoneTasksToLocal();

@@ -5,35 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    </style>
     <script src="index.js" defer></script>
     <title>Todo App Vanilla JS+jquery</title>
 </head>
 <body>
     <div id="container">
-        <h1 class="title">Todo App</h1>
+        <h1 class="title">TO-DO APP</h1>
+        <hr>
+        <!-- <p>Add task</p> -->
         <div>
             <input type="text" id="inputTask" placeholder="Add task">
             <button id="btn-add" class="btn">Add</button>
         </div>
-    </div>    
-    <hr>
+        <hr>
         <div id="general">
+            <p>To-do list</p>
             <ol id="tasks" class="btn">
                 <!-- <li>
                     <button>X</button>
                 </li> -->
             </ol>
-    </div>
-
-    <div id="completed">
-        <p>Completed Tasks:</p>
-        <ol id="done" class="btn">
-            <!-- <li>
-                <button>X</button>
-            </li> -->
-        </ol>
-    </div>
-    <button id="btn-clearAll" class="btn">Clear All</button>
+        </div>
+        <button id="btn-clearAll" class="btn">Clear All</button>
+        <hr>
+        <div id="completed">
+            <p>Completed Tasks</p>
+            <ol id="done" class="btn">
+                <!-- <li>
+                    <button>X</button>
+                </li> -->
+            </ol>
+        </div>
+    </div>    
     
 </body>
 </html>

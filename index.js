@@ -5,6 +5,7 @@ let doneString = "";
 let inputVal = "";
 let taskDone = "";
 initiate();
+let toTest = 0;
 
 function initiate() {
         if (localStorage.getItem("tasks")) {
@@ -18,15 +19,15 @@ function initiate() {
         }  
         
         for (let i = 0; i < tasks.length; i++) {
-            document.querySelector("#tasks").insertAdjacentHTML("beforeend","<li>" + tasks[i] +
-            ` <button class="btnDoneCurrent">✓</button>` + 
+            document.querySelector("#tasks").insertAdjacentHTML("beforeend","<li><label>" + tasks[i] +
+            ` </label><button class="btnDoneCurrent">✓</button>` + 
             ` <button class="btnRemoveCurrent">X</button>` +
             `</li>`);
         }
     
         done.forEach(el => {
-            document.querySelector("#done").insertAdjacentHTML("beforeend","<li>" + el + 
-            ` <button class="btnRevertCurrent">↺</button>` +
+            document.querySelector("#done").insertAdjacentHTML("beforeend","<li><label>" + el + 
+            ` </label><button class="btnRevertCurrent">↺</button>` +
             "</li>");
         });
 }
@@ -40,8 +41,8 @@ document.querySelector("#btn-add").addEventListener("click", function(){
         tasks.push(inputVal);
         saveCurrentTasksToLocal();
 
-        document.querySelector("#tasks").insertAdjacentHTML("beforeend","<li>" + inputVal +
-        ` <button class="btnDoneCurrent">✓</button>` + 
+        document.querySelector("#tasks").insertAdjacentHTML("beforeend","<li><label>" + inputVal +
+        ` </label><button class="btnDoneCurrent">✓</button>` + 
         ` <button class="btnRemoveCurrent">X</button>` +
         `</li>`);
     }
@@ -58,7 +59,7 @@ document.querySelector('body').addEventListener('click', function(event) { //An 
 
     if (event.target.className === 'btnRemoveCurrent') {
         console.log(event.target.closest("li").innerText);
-        let currentTask = event.target.closest("li").innerText.match(/[\W\s\w]+(?= \W)/m).join(); //Regex to select the task name (every char, symbol and/or spaces) just before button
+        let currentTask = event.target.closest("li").innerText.match(/[\w\W]+(?=\n\W)/m).join(); //Regex to select the task name (every char, symbol and/or spaces) just before button
         let index = tasks.indexOf(currentTask);
         tasks.splice(index,1);
     
@@ -69,7 +70,8 @@ document.querySelector('body').addEventListener('click', function(event) { //An 
 
     if (event.target.className === "btnDoneCurrent") {
         console.log(event.target.closest("li").innerText);
-        taskDone = event.target.closest("li").innerText.match(/[\W\s\w]+(?= \W)/m).join(); //Regex to select the task name (every char, symbol and/or spaces) just before button
+        toTest = event.target.closest("li").innerText;
+        taskDone = event.target.closest("li").innerText.match(/[\w\W]+(?=\n\W)/m).join(); //Regex to select the task name (every char, symbol and/or spaces) just before button
 
         done.push(taskDone);
         saveDoneTasksToLocal();
@@ -85,13 +87,13 @@ document.querySelector('body').addEventListener('click', function(event) { //An 
 
     if (event.target.className === "btnRevertCurrent") {
         
-        inputVal = event.target.closest("li").innerText.match(/[\W\s\w]+(?= \W)/m).join(); //Regex to select the task name (every char, symbol and/or spaces) just before button
+        inputVal = event.target.closest("li").innerText.match(/[\w\W]+(?=\n\W)/m).join(); //Regex to select the task name (every char, symbol and/or spaces) just before button
 
         tasks.push(inputVal);
         saveCurrentTasksToLocal();
         
-        document.querySelector("#tasks").insertAdjacentHTML("beforeend","<li>" + inputVal +
-        ` <button class="btnDoneCurrent">✓</button>` + 
+        document.querySelector("#tasks").insertAdjacentHTML("beforeend","<li><label>" + inputVal +
+        ` </label><button class="btnDoneCurrent">✓</button>` + 
         ` <button class="btnRemoveCurrent">X</button>` +
         `</li>`);
 
@@ -110,8 +112,8 @@ function checkDoneTasks() {
     document.querySelector("#done").innerHTML = ""; // Remove the current tasks, to avoid overwritting content.
 
     done.forEach(el => {
-        document.querySelector("#done").insertAdjacentHTML("beforeend","<li>" + el + 
-        ` <button class="btnRevertCurrent">↺</button>` +
+        document.querySelector("#done").insertAdjacentHTML("beforeend","<li><label>" + el + 
+        ` </label><button class="btnRevertCurrent">↺</button>` +
         "</li>");
     });
 }

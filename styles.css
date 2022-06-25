@@ -1,63 +1,165 @@
 body {
-    background-color: papayawhip;
+    background-color: #e4e4e4;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+
+#container {
+	display: flex;
+    flex-direction: column;
+	width: 50vh;
+	margin: 10px auto 100px;
+	background-color:#fff;
+	padding:0px 10px 10px 10px;
+	border-radius:10px
+}
+
+#inputTask {
+	margin: 0;
+	font-size: 18px;
+	line-height: 18px;
+	min-height: 18px;
+    width: 36vh;
+	padding: 10px;
+	border: 1px solid #ddd;
+	background: #fff;
+	border-radius: 6px;
+    font-family: 'Lato', sans-serif;
+    color: #888;
+    display: flex;
+    align-items: center;
+}
+
+#inputTask:focus {
+	color: #333;
+}
+
+button {
+	background: none;
+	border: 0px;
+	color: #888;
+	font-size: 15px;
+	width: 10vh;
+	margin: 10px 0 0;
+	font-family: Lato, sans-serif;
+	cursor: pointer;
+}
+
+button:hover {
+	color: #333;
 }
 
 hr {
-    border-color: gray;
+    border-color: #333;
     /* top | right | bottom | left */
-    border-style: dotted none none none;
+    border-style: solid none none none;
     border-width: 0.1cm;
-    width: 45%;
+    width: 100%;
 }
 
-.btnDoneCurrent {
-    background-color: green;
+.btnDoneCurrent:hover {
+    font-weight: 600;
+    color: #0FC57C;
+    font-size: x-large;
 }
 
-.btnRemoveCurrent {
-    background-color: rgb(199, 71, 71);
-    color: white;
+.btnRemoveCurrent:hover {
+    color: #CF2323;
+    font-weight: 600;
+    font-size: x-large;
+}
+
+.btnRevertCurrent:hover {
+    color: cornflowerblue;
+    font-weight: 600;
+    font-size: x-large;
 }
 
 .btnRevertCurrent {
-    background-color: cornflowerblue;
-    color: white;
+    margin-left: 6vh;
 }
 
-.buttons {
+/* .buttons {
     visibility: none;
-}
+} */
 
 .crossed {
     text-decoration: line-through;
 }
 
 #completed {
-    display: flex;
-    flex-direction: column;
-    align-self: baseline;
+    /* display: flex;
+    flex-direction: column; */
+    /* align-self: center; */
+    margin: 0;
 }
 
-#done {
-    border: dotted;
+/* #done {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
     border-top: none;
     padding: 15px 20px 15px 40px;
-}
+} */
  
 .btn {
     font-size: 1.2rem;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 600;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    font-weight: 400;
 }
 
 h1 {
-    font-size: 2.2rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 
 p {
-    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#btn-clearAll {
+    align-self: center;
+    width: 15vh;
+    margin: 3vh 3vh 1vh;
+    padding: 1vh;
+    border: solid 1px #888;
+    text-transform: uppercase;
+}
+
+#btn-clearAll:hover {
+    color: red;
+    background: rgb(85, 19, 19);
+}
+
+li {
+    display: flex;
+    float: left;
+    /* clear: both; */
+	padding: 1vh 0;
+	border-bottom: 2px solid #dbdbdb;
+    word-wrap: break-word;
+}
+
+li > label {
+    text-transform: capitalize;
+	font-size: 1.2rem;
+	line-height: 40px;
+	width: 25vh;
+	padding: 0 20px 0 11px;
+}
+
+li > button {
+	/* font-size: 18px; */
+	/* line-height: 40px; */
+	width: 6vh;
+    float: right;
+	/* padding: 0 11px 0 0px; */
+}
+
+ol {
+    margin: 0;
 }

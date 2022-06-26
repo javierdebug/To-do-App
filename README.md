@@ -9,7 +9,4 @@ This app uses the Local Storage property from the browser, this way the app is a
 
 **General view of the main area:**
 
-![Screenshot Image](/images/website-general-area-screenshot.png)
-
-A list of the tasks the user has completed are store in a separated area called _"Completed Tasks"_:
-![Screenshot Image](/images/complete-tasks-list-screenshot.png)
+![Screenshot Image](/images/Webapp-General-view-screenshoot.jpg)

@@ -6,11 +6,11 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-#container {
+.container {
 	display: flex;
     flex-direction: column;
-	width: 50vh;
-	margin: 10px auto 100px;
+	width: 40vh;
+	margin: 2vh auto 0vh;
 	background-color:#fff;
 	padding:0px 10px 10px 10px;
 	border-radius:10px
@@ -21,7 +21,7 @@ body {
 	font-size: 18px;
 	line-height: 18px;
 	min-height: 18px;
-    width: 36vh;
+    width: 25vh;
 	padding: 10px;
 	border: 1px solid #ddd;
 	background: #fff;
@@ -135,8 +135,7 @@ p {
 
 li {
     display: flex;
-    float: left;
-    /* clear: both; */
+    /* float: left; */
 	padding: 1vh 0;
 	border-bottom: 2px solid #dbdbdb;
     word-wrap: break-word;

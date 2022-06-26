@@ -28,8 +28,6 @@ body {
 	border-radius: 6px;
     font-family: 'Lato', sans-serif;
     color: #888;
-    display: flex;
-    align-items: center;
 }
 
 #inputTask:focus {

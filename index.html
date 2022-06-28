@@ -12,15 +12,18 @@
     <title>Todo App Vanilla JS+jquery</title>
 </head>
 <body>
-    <div id="container">
+    <div class="container">
         <h1 class="title">TO-DO APP</h1>
         <hr>
         <!-- <p>Add task</p> -->
         <div>
-            <input type="text" id="inputTask" placeholder="Add task">
+            <input type="text" id="inputTask" placeholder="Add task" pattern="[a-z]{4,8}" title="4 to 8 lowercase letters">
+            <span class="validity"></span>
             <button id="btn-add" class="btn">Add</button>
         </div>
-        <hr>
+        <!-- <hr> -->
+    </div>
+    <div class="container">
         <div id="general">
             <p>To-do list</p>
             <ol id="tasks" class="btn">

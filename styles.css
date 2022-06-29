@@ -9,7 +9,7 @@ body {
 .container {
 	display: flex;
     flex-direction: column;
-	width: 40vh;
+	width: max(30vw,50vh);
 	margin: 2vh auto 0vh;
 	background-color:#fff;
 	padding:0px 10px 10px 10px;
@@ -21,7 +21,7 @@ body {
 	font-size: 18px;
 	line-height: 18px;
 	min-height: 18px;
-    width: 25vh;
+    width: 70%;
 	padding: 10px;
 	border: 1px solid #ddd;
 	background: #fff;
@@ -39,8 +39,8 @@ button {
 	border: 0px;
 	color: #888;
 	font-size: 15px;
-	width: 10vh;
-	margin: 10px 0 0;
+	/* width: 10vh; */
+	margin: 10px 0 0 10px;
 	font-family: Lato, sans-serif;
 	cursor: pointer;
 }
@@ -63,10 +63,15 @@ hr {
     font-size: x-large;
 }
 
-.btnRemoveCurrent:hover {
+.btnRemoveCurrent:hover, .btnRemoveCurrentDone:hover {
     color: #CF2323;
     font-weight: 600;
     font-size: x-large;
+}
+
+.btnEditCurrent:hover {
+    font-size: x-large;
+    font-weight: 600;
 }
 
 .btnRevertCurrent:hover {
@@ -79,29 +84,10 @@ hr {
     margin-left: 6vh;
 }
 
-/* .buttons {
-    visibility: none;
-} */
-
 .crossed {
     text-decoration: line-through;
 }
 
-#completed {
-    /* display: flex;
-    flex-direction: column; */
-    /* align-self: center; */
-    margin: 0;
-}
-
-/* #done {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    border-top: none;
-    padding: 15px 20px 15px 40px;
-} */
- 
 .btn {
     font-size: 1.2rem;
     /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
@@ -121,7 +107,7 @@ p {
 
 #btn-clearAll {
     align-self: center;
-    width: 15vh;
+    width: 20vh;
     margin: 3vh 3vh 1vh;
     padding: 1vh;
     border: solid 1px #888;
@@ -159,4 +145,8 @@ li > button {
 
 ol {
     margin: 0;
+}
+
+#done > li > label {
+    text-decoration: line-through;
 }

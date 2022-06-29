@@ -7,6 +7,6 @@ Live site: [Use the Todo app](https://javierdebug.github.io/To-do-App/)
 This app uses the Local Storage property from the browser, this way the app is able to storage the user's data even after reloading or closing the tab.
 &nbsp;
 
-**General view of the main area:**
+**Example of the main area of the app:**
 
-![Screenshot Image](/images/Webapp-General-view-screenshoot.jpg)
+![Screenshot Image](/images/General-view-of-the-app.jpg)

@@ -9,23 +9,23 @@ body {
 .container {
 	display: flex;
     flex-direction: column;
-	width: max(30vw,50vh);
+	width: clamp(75px, 80%, 500px);
 	margin: 2vh auto 0vh;
 	background-color:#fff;
-	padding:0px 10px 10px 10px;
+	padding: 0px 10px 10px 10px;
 	border-radius:10px
 }
 
+#insertTask {
+    display: flex;
+}
+
 #inputTask {
-	margin: 0;
-	font-size: 18px;
-	line-height: 18px;
-	min-height: 18px;
-    width: 70%;
-	padding: 10px;
+	font-size: clamp(0.5rem, 6.5vw, 1.2rem);
+    width: 85%;
+    padding: 10px;
 	border: 1px solid #ddd;
-	background: #fff;
-	border-radius: 6px;
+    border-radius: 6px;
     font-family: 'Lato', sans-serif;
     color: #888;
 }
@@ -38,7 +38,7 @@ button {
 	background: none;
 	border: 0px;
 	color: #888;
-	font-size: 15px;
+	font-size: clamp(0.5rem, 6.5vw, 1.2rem);
 	/* width: 10vh; */
 	margin: 10px 0 0 10px;
 	font-family: Lato, sans-serif;
@@ -88,30 +88,25 @@ hr {
     text-decoration: line-through;
 }
 
-.btn {
-    font-size: 1.2rem;
-    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
-    font-weight: 400;
-}
-
 h1 {
-    font-size: 1.2rem;
+    font-size: clamp(0.5rem, 6.0vw, 1.6rem);
     text-align: center;
 }
 
 p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-transform: uppercase;
     font-weight: 600;
+    font-size: clamp(0.5rem, 4.5vw, 1.2rem);
 }
 
 #btn-clearAll {
     align-self: center;
-    width: 20vh;
+    width: clamp(30%, 65%, 20vh);
     margin: 3vh 3vh 1vh;
     padding: 1vh;
     border: solid 1px #888;
     text-transform: uppercase;
+    font-size: clamp(0.5rem, 4.5vw, 1.2rem);
 }
 
 #btn-clearAll:hover {
@@ -122,15 +117,15 @@ p {
 li {
     display: flex;
     /* float: left; */
-	padding: 1vh 0;
+	padding: 1vh;
 	border-bottom: 2px solid #dbdbdb;
     word-wrap: break-word;
 }
 
 li > label {
     text-transform: capitalize;
-	font-size: 1.2rem;
-	line-height: 40px;
+	font-size: clamp(0.5rem, 6.5vw, 1.2rem);
+	line-height: clamp(1rem, 10vw, 2.4rem);
 	width: 25vh;
 	padding: 0 20px 0 11px;
 }
@@ -140,11 +135,12 @@ li > button {
 	/* line-height: 40px; */
 	width: 6vh;
     float: right;
-	/* padding: 0 11px 0 0px; */
+    margin: auto;
 }
 
 ol {
     margin: 0;
+    padding: 0;
 }
 
 #done > li > label {

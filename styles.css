@@ -63,13 +63,14 @@ hr {
     font-size: x-large;
 }
 
-.btnRemoveCurrent:hover, .btnRemoveCurrentDone:hover {
+.btnRemoveCurrent:hover, .btnRemoveDoneCurrent:hover {
     color: #CF2323;
     font-weight: 600;
     font-size: x-large;
 }
 
 .btnEditCurrent:hover {
+    color: darkorange;
     font-size: x-large;
     font-weight: 600;
 }
@@ -124,10 +125,10 @@ li {
 
 li > label {
     text-transform: capitalize;
-	font-size: clamp(0.5rem, 6.5vw, 1.2rem);
+	font-size: clamp(0.5rem, 5.5vw, 1.2rem);
 	line-height: clamp(1rem, 10vw, 2.4rem);
-	width: 25vh;
-	padding: 0 20px 0 11px;
+	width: clamp(75px, 60%, 500px);
+	padding: 0;
 }
 
 li > button {
@@ -145,4 +146,10 @@ ol {
 
 #done > li > label {
     text-decoration: line-through;
+}
+
+@media (max-width: 600px) {
+    .btnDoneCurrent:hover, .btnEditCurrent:hover, .btnRevertCurrent:hover, .btnRemoveDoneCurrent:hover, .btnRemoveCurrent:hover{
+        font-size: 0.8rem;
+    }
 }
